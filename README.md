@@ -1,1 +1,1 @@
-# yolouno_extension_rtc_pcf8563
+Yolo:Bit extension for DS1307
