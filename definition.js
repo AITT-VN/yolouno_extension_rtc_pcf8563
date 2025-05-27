@@ -109,7 +109,7 @@ Blockly.Python["pcf8563_gettime"] = function(block) {
   // TODO: Assemble Python into code variable.
   Blockly.Python.definitions_['import_i2c'] = 'from machine import Pin, SoftI2C';
   Blockly.Python.definitions_["import_ds1307"] = "from pcf8563 import PCF8563";
-  Blockly.Python.definitions_["import_create_ds1307"] = "pcf8563 = PCF8563(SoftI2C(scl=Pin(22), sda=Pin(21)))";
+  Blockly.Python.definitions_["import_create_ds1307"] = "pcf8563 = PCF8563(SoftI2C(scl=SCL_PIN, sda=SDA_PIN))";
   var code = "";
   if (dropdown_data == "NĂM")
     code = "pcf8563.year()\n";
