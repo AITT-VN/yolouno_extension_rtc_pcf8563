@@ -1,6 +1,10 @@
 {
     "name": "PCF8563",
+<<<<<<< HEAD
+    "description": "Mục mở rộng dành cho module thời gian thực PCF8563",
+=======
     "description": "Mục mở rộng dành cho cảm biến thời gian PCF8563",
+>>>>>>> fd2942013c44a32b509fa1e041c37b1ae82aac3b
     "libs": [
         "pcf8563.py"
     ],

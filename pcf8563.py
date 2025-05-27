@@ -183,8 +183,11 @@ class PCF8563:
             self.__write_byte(PCF8563_DAY_REG, self.__dec2bcd(date))
 
         if day is not None:
+<<<<<<< HEAD
+=======
             print("Day is")
             print(day)
+>>>>>>> fd2942013c44a32b509fa1e041c37b1ae82aac3b
             if day < 1 or day > 7:
                 raise ValueError("Day is out of range [1,7].")
             self.__write_byte(PCF8563_WEEKDAY_REG, self.__dec2bcd(day))
