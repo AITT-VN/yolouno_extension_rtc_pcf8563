@@ -1,31 +1,5 @@
-"""
-MIT License
-
-Copyright (c) 2019 lewis he
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-pcf8563.py - MicroPython library for NXP PCF8563 Real-time clock/calendar
-Created by Lewis he on September 17, 2019.
-github:https://github.com/lewisxhe/PCF8563_PythonLibrary
-"""
-
+from yolo_uno import *
+from machine import SoftI2C
 import utime
 
 PCF8563_SLAVE_ADDRESS = const(0x51)
@@ -183,11 +157,8 @@ class PCF8563:
             self.__write_byte(PCF8563_DAY_REG, self.__dec2bcd(date))
 
         if day is not None:
-<<<<<<< HEAD
-=======
             print("Day is")
             print(day)
->>>>>>> fd2942013c44a32b509fa1e041c37b1ae82aac3b
             if day < 1 or day > 7:
                 raise ValueError("Day is out of range [1,7].")
             self.__write_byte(PCF8563_WEEKDAY_REG, self.__dec2bcd(day))
@@ -286,3 +257,6 @@ class PCF8563:
             if weekday < 0 or weekday > 6:
                 raise ValueError("weekday is out of range [0,6].")
             self.__write_byte(PCF8563_ALARM_WEEKDAY, self.__dec2bcd(weekday) & 0x7F)
+
+i2c = SoftI2C(scl=SCL_PIN, sda=SDA_PIN, freq=100000)
+pcf8563 = PCF8563(i2c)

@@ -1,35 +1,26 @@
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
   <category name="PCF8563" colour="#006600" icon="clock">
-<<<<<<< HEAD
-    <block type="pcf8563_gettime"/>
-    <block type="pcf8563_settime">
-      <value name="DATE">
-=======
     <block type="pcf8563_settime">
       <value name="YEAR">
->>>>>>> fd2942013c44a32b509fa1e041c37b1ae82aac3b
         <shadow type="math_number">
           <field name="NUM">0</field>
         </shadow>
       </value>
       <value name="MONTH">
         <shadow type="math_number">
-          <field name="MONTH">0</field>
-        </shadow>
-      </value>
-<<<<<<< HEAD
-      <value name="YEAR">
-        <shadow type="math_number">
           <field name="NUM">0</field>
         </shadow>
-      </value>     
-=======
+      </value>
       <value name="DATE">
         <shadow type="math_number">
           <field name="NUM">0</field>
         </shadow>
       </value>
->>>>>>> fd2942013c44a32b509fa1e041c37b1ae82aac3b
+      <value name="DAY">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
       <value name="HOUR">
         <shadow type="math_number">
           <field name="NUM">0</field>
@@ -46,9 +37,6 @@
         </shadow>
       </value>
     </block>
-<<<<<<< HEAD
-=======
     <block type="pcf8563_gettime"/>
->>>>>>> fd2942013c44a32b509fa1e041c37b1ae82aac3b
   </category>
 </xml>
