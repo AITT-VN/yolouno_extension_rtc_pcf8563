@@ -121,21 +121,21 @@ Blockly.Python["pcf8563_gettime"] = function(block) {
   Blockly.Python.definitions_["import_pcf8563"] = "from pcf8563 import *";
   var code = "";
   if (dropdown_data == "NĂM")
-    code = "pcf8563.datetime()[0]\n";
+    code = "pcf8563.datetime()[0]";
   else if (dropdown_data == "THÁNG")
-    code = "pcf8563.datetime()[1]\n";
+    code = "pcf8563.datetime()[1]";
   else if (dropdown_data == "NGÀY")
-    code = "pcf8563.datetime()[2]\n"; 
+    code = "pcf8563.datetime()[2]"; 
   else if (dropdown_data == "THỨ")
-    code = "pcf8563.datetime()[3]\n"; 
+    code = "pcf8563.datetime()[3]"; 
   else if (dropdown_data == "ĐẦY ĐỦ")
     code = "''.join([str(x) for x in ['Thứ ', str(pcf8563.datetime()[3]), ' ', '{0:0>2}'.format(pcf8563.datetime()[2]), '/', '{0:0>2}'.format(pcf8563.datetime()[1]), '/', '{0:0>2}'.format(pcf8563.datetime()[0]), ' ', '{0:0>2}'.format(pcf8563.datetime()[4]), ':', '{0:0>2}'.format(pcf8563.datetime()[5]), ':', '{0:0>2}'.format(pcf8563.datetime()[6])]])"
   else if (dropdown_data == "GIỜ")
-    code =  "pcf8563.datetime()[4]\n";
+    code =  "pcf8563.datetime()[4]";
   else if (dropdown_data == "PHÚT")
-    code = "pcf8563.datetime()[5]\n";
+    code = "pcf8563.datetime()[5]";
   else if (dropdown_data == "GIÂY")
-    code = "pcf8563.datetime()[6]\n";
+    code = "pcf8563.datetime()[6]";
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.Python.ORDER_NONE];
 };
